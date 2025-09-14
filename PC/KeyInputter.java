@@ -3,7 +3,7 @@ package ChPCJavaLibrary.PC;
 import java.awt.event.*;
 import java.util.*;
 
-public class ChKeyInputter implements KeyListener
+public class KeyInputter implements KeyListener
 {
 
     public boolean IsPushKeyState(int _vk)

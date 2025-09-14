@@ -3,7 +3,7 @@ package ChPCJavaLibrary.PC;
 import java.awt.*;
 import ChJavaBaseLibrary.ClassParts.*;
 
-public class ChWindowButton  extends ChIsInitialiser {
+public class WindowButton  extends ChIsInitialiser {
     public void Init()
     {
 

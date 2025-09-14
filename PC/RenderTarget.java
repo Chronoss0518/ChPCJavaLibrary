@@ -3,9 +3,9 @@ package ChPCJavaLibrary.PC;
 import java.awt.*;
 import java.awt.image.*;
 
-import ChPCJavaLibrary.PC.FrameInterface.ChFramePainter;
+import ChPCJavaLibrary.PC.FrameInterface.FramePainter;
 
-public class RenderTarget extends ChBaseImage implements ChFramePainter {
+public class RenderTarget extends BaseImage implements FramePainter {
     
     public void Init(int _w,int _h)
     {

@@ -3,10 +3,10 @@ package ChPCJavaLibrary.PC;
 import java.awt.Graphics;
 import java.util.*;
 
-import ChPCJavaLibrary.PC.FrameInterface.ChFramePainter;
-import ChPCJavaLibrary.PC.FrameInterface.ChFrameUpdater;
+import ChPCJavaLibrary.PC.FrameInterface.FramePainter;
+import ChPCJavaLibrary.PC.FrameInterface.FrameUpdater;
 
-public class ChFrameBase implements ChFramePainter, ChFrameUpdater {
+public class FrameBase implements FramePainter, FrameUpdater {
 
     @Override
     public void Paint(Graphics _g)
@@ -30,5 +30,5 @@ public class ChFrameBase implements ChFramePainter, ChFrameUpdater {
         }
     }
 
-    List<ChFrameBase> list = new ArrayList<ChFrameBase>();
+    List<FrameBase> list = new ArrayList<FrameBase>();
 }

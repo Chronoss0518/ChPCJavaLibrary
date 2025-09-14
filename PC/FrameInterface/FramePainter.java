@@ -2,7 +2,7 @@ package ChPCJavaLibrary.PC.FrameInterface;
 
 import java.awt.*;
 
-public interface ChFramePainter
+public interface FramePainter
 {
     void Paint(Graphics _g);
 }
