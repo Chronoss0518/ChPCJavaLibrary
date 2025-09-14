@@ -15,6 +15,14 @@ public class WindowFrame extends ChIsInitialiser{
         if (IsInit())
             return;
 
+        Init(_TitleName,500,500);
+    }
+
+    public void Init(String _TitleName,int _w,int _h) {
+
+        if (IsInit())
+            return;
+
         TitleName = _TitleName;
         WindSize = new ChPoint();
         KeyInput = new KeyInputter();
@@ -31,10 +39,10 @@ public class WindowFrame extends ChIsInitialiser{
 
         BFrame.addKeyListener(KeyInput);
 
-        WindSize.x = 500;
-        WindSize.y = 500;
+        WindSize.x = _w;
+        WindSize.y = _h;
 
-        BFrame.setSize(500, 500);
+        BFrame.setSize(_w, _h);
         BFrame.setVisible(true);
         SetInitFlg(true);
     }
@@ -58,6 +66,16 @@ public class WindowFrame extends ChIsInitialiser{
         WindSize.SetValue(_Size);
 
         BFrame.setSize(_Size.x, _Size.y);
+    }
+
+    void setWindSize(int _w,int _h) {
+
+        if (!IsInit())
+            return;
+
+        WindSize.SetValue(_w,_h);
+
+        BFrame.setSize(WindSize.x, WindSize.y);
     }
 
     public void setUpdater(FrameUpdater _updater) {
@@ -85,7 +103,7 @@ public class WindowFrame extends ChIsInitialiser{
 
     public String getTitle() {
         if (!IsInit())
-            return new String();
+            return "";
 
         return BFrame.getTitle();
     }
