@@ -2,7 +2,7 @@ package ChPCJavaLibrary.PC.WindowApdaters;
 
 import java.awt.event.*;
 
-interface ChWindowClosing
+interface WindowClosing
 {
     abstract void WindowClosing(WindowEvent e);
 }

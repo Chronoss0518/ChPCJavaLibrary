@@ -6,7 +6,7 @@ import ChJavaBaseLibrary.Std.*;
 import ChJavaBaseLibrary.ClassParts.*;
 import ChPCJavaLibrary.PC.FrameInterface.*;
 
-public class ChWindowFrame extends ChIsInitialiser{
+public class WindowFrame extends ChIsInitialiser{
     ///////////////////////////////////////////////////////////////////////////////////
     // InitializeAndRelease//
 
@@ -17,7 +17,7 @@ public class ChWindowFrame extends ChIsInitialiser{
 
         TitleName = _TitleName;
         WindSize = new ChPoint();
-        KeyInput = new ChKeyInputter();
+        KeyInput = new KeyInputter();
         FPS = 60;
         FPSCount = System.currentTimeMillis();
         BFrame = new ChFrame();
@@ -60,14 +60,14 @@ public class ChWindowFrame extends ChIsInitialiser{
         BFrame.setSize(_Size.x, _Size.y);
     }
 
-    public void setUpdater(ChFrameUpdater _updater) {
+    public void setUpdater(FrameUpdater _updater) {
         if (!IsInit())
             return;
 
         BFrame.setUpdater(_updater);
     }
 
-    public void setPainter(ChFramePainter _painter) {
+    public void setPainter(FramePainter _painter) {
         if (!IsInit())
             return;
 
@@ -104,9 +104,9 @@ public class ChWindowFrame extends ChIsInitialiser{
         return BFrame;
     }
 
-    public ChKeyInputter getKeyInputter() {
+    public KeyInputter getKeyInputter() {
         if (!IsInit())
-            return new ChKeyInputter();
+            return new KeyInputter();
         return KeyInput;
     }
 
@@ -136,7 +136,7 @@ public class ChWindowFrame extends ChIsInitialiser{
     private ChFrame BFrame = null;
     protected WindowAdapter adapteraptor = null;
     protected ChPoint WindSize = null;
-    protected ChKeyInputter KeyInput = null;
+    protected KeyInputter KeyInput = null;
 
     class ChFrame extends Frame {
         @Override
@@ -168,16 +168,16 @@ public class ChWindowFrame extends ChIsInitialiser{
             frame.repaint();
         }
 
-        public void setUpdater(ChFrameUpdater _updater) {
+        public void setUpdater(FrameUpdater _updater) {
             updater = _updater;
         }
 
-        public void setPainter(ChFramePainter _painter) {
+        public void setPainter(FramePainter _painter) {
             painter = _painter;
         }
         Frame frame = new Frame();
-        ChFrameUpdater updater = null;
-        ChFramePainter painter = null;
+        FrameUpdater updater = null;
+        FramePainter painter = null;
 
     }
 }
